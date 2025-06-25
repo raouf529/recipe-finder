@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Recipe_finder</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light pt-3 pb-3 pe-2 ps-2 bg-dark">
+    <div class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="#">
+        <span class="text-light fw-bold">
+          Alaa recipes page
+        </span>
+      </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center " id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">About The app</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#main-section">search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#suggested-meals">best recipes</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="main-section">
+    <div class="part2 p-3">
+      <h1>Search for the recipe you want</h1>
+    </div>
+    <div class="part1 p-3">
+      <div class="search-bar-cotainer">
+        <input class="form-control" type="text" placeholder="Enter name of recipe" aria-label="default input example" id="input-bar">
+        <button class="btn btn-success btn-success text-light btn-lg" id="search">search</button>
+      </div>
+    </div>
+    <div class="recipes-cards" id="part3">
+      <div class="card">
+          <img src="..." class="card-img-top" alt="recipe4">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+        <h3>Recipe not found</h3>
+    </div>
+    
+  </section>
+
+  <section id="suggested-meals">
+    <div class="filter">
+      <div class="title-part">
+        <h3>Suggest recipes</h3>
+      </div>
+      <div class="buttons-part">
+        <button class="btn btn-outline-dark" id="reset"><i class="fa-solid fa-repeat"></i></button>
+        <select class="form-select" aria-label="Category select" id="category">
+          <option selected>Category</option>
+          <option value="Beef">Beef</option>
+          <option value="Chicken">Chicken</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Lamb">Lamb</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Seafood">Seafood</option>
+          <option value="Side">Side</option>
+          <option value="Starter">Starter</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Breakfast">Breakfast</option>
+        </select>
+
+        <select class="form-select" aria-label="Cuisine area select" id="area">
+          <option selected>Area</option>
+          <option value="American">American</option>
+          <option value="British">British</option>
+          <option value="Canadian">Canadian</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Egyptian">Egyptian</option>
+          <option value="French">French</option>
+          <option value="Greek">Greek</option>
+          <option value="Indian">Indian</option>
+          <option value="Italian">Italian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Mexican">Mexican</option>
+          <option value="Moroccan">Moroccan</option>
+          <option value="Thai">Thai</option>
+          <option value="Turkish">Turkish</option>
+          <option value="Vietnamese">Vietnamese</option>
+        </select>
+      </div>
+    </div>
+    <div class="recipes-cards">
+      <button class="arrow-left btn btn-outline-info">←</button>
+      <div class="cards-container">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe1">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe2">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe3">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe4">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe5">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe6">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe7">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe8">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="..." class="card-img-top" alt="recipe9">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold"></span><br>
+              category:<span class="category fw-normal fw-bolder"></span><br>
+              area:<span class="name fw-bolder"></span><br>
+              <span class="text-info">more details</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="arrow-right btn btn-outline-info">→</button>
+    </div>
+  </section>
+  <secion id="full-details">
+    <div class="main-card p-5">
+      <div class="card"id="#special content" >
+          <img src="..." class="card-img-top" alt="recipe" id="recipe_img">
+          <div class="card-body">
+            <p class="card-text">
+              <span class="name fw-bold align-center" id="name"></span><br>
+              <hr>
+              category:<span class="fw-normal fw-bolder" id="Category"></span><br>
+              <hr>
+              area:<span class="fw-bolder" id="Area1"></span><br>
+              <hr>
+              ingredients:
+                <ul id="ingredients"></ul>
+              <hr>
+              steps:
+              <span id="steps"></span>
+              <hr>
+              you can wach this vieos:
+              <a href = "#" id="source1"> youtub </a><br>
+              you can visit the source:
+              <a href = "#" id="source2"> source </a>
+            </p>
+          </div>
+        </div>
+        <div class="button-container-exit">
+          <button class="btn btn-success btn-success text-light btn-lg mt-3" id="back">back</button>
+        </div>
+    </div>
+  </secion>
+  
+
+  <section id="about" class="bg-light p-4 text-center">
+    <div class="container">
+      <h2>About This Website</h2>
+      <p class="lead">This recipe finder helps you explore a variety of meals by name, category, and region. Quickly search, view details, and enjoy cooking!</p>
+    </div>
+  </section>
+
+
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <small>&copy; 2025 Alaa Recipes. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous">
+  </script>
+  <script src="main.js"></script>
+  <script src="scroll.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header-container {
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+}
+
+#main-section {
+    width: 100%;
+    background-image: url("assets/lily-banse--YHSwy6uqvk-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+}
+
+.part1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar-cotainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.part1 input {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part2 h1 {
+    width: 60%;
+    font-weight: bolder;
+}
+
+#suggested-meals {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.filter {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons-part {
+    width: 80%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.filter select {
+    width: 20%;
+    margin-left: 0.5em;
+}
+
+.recipes-cards {
+    padding: 0.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2em;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    flex-shrink: 0;
+    width: 33%;
+    scroll-snap-align: start;
+}
+
+.arrow-left,
+.arrow-right {
+    border-radius: 50%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.recipes-cards:has(.cards-container[scrollable]) .arrow-left,
+.recipes-cards:has(.cards-container[scrollable]) .arrow-right {
+    visibility: visible;
+}
+
+#full-details{
+    width: 100%;
+    min-height: 170vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    display: none;
+}
+.main-card{
+    width: 60%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-card .card{
+    width: 100%;
+}
+.main-card .card img{
+    height: 450px
+}
+
+/* === Full Details Section === */
+#full-details {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* === Text Content Enhancements === */
+.card-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Headings & Labels */
+.card-text span.name {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.card-text hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 12px 0;
+}
+
+.card-text span.fw-bolder,
+.card-text span.fw-normal {
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* === Ingredient List === */
+#ingredients {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+#ingredients li {
+    padding: 4px 0;
+}
+
+/* === Cooking Steps === */
+#steps {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-left: 4px solid #4caf50;
+    font-style: italic;
+    white-space: pre-line;
+}
+.text-info{
+    cursor: pointer;
+}
+
+#source1,
+#source2 {
+    display: inline-block;
+    margin-top: 5px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+#source1:hover,
+#source2:hover {
+    text-decoration: underline;
+    color: #1d6fa5;
+}
+
+
+.button-container-exit button {
+    transition: background-color 0.3s ease;
+}
+.button-container-exit button:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+#part3 .card{
+    display: none;
+}
+#part3 h3{
+    display: none;
+}
+@media(max-width: 768px) {
+    #main-section {
+        width: 100%;
+        padding: 2em;
+    }
+
+    .part1 {
+        width: 60%;
+    }
+
+    .search-bar-cotainer {
+        width: 100%;
+    }
+
+    .card {
+        width: 45%;
+    }
+    .main-card{
+        width: 85%;
+    }
+    .main-card .card img{
+    height: 350px
+    }
+}
+
+@media(max-width: 480px) {
+    #main-section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 0.5em;
+    }
+
+    .part1 {
+        width: 80%;
+    }
+
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .buttons-part {
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .filter select {
+        width: 30%;
+        margin-left: 0.5em;
+    }
+
+    .search-bar-cotainer {
+        width: 100%;
+    }
+
+    .recipes-cards {
+        padding: 0.5em;
+        gap: 0.5em;
+    }
+
+    .cards-container {
+        gap: 1em;
+    }
+
+    .card {
+        width: 100%;
+    }
+    .main-card{
+        width: 90%;
+    }
+    .main-card .card img{
+    height: 250px
+    }
+}
